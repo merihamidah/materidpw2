@@ -12,6 +12,9 @@ class Mobil {
     function kecepatanMax(){
         return " Kecepatan maksimal dari mobil ini adalah ".$this->max_speed;
     }
+    function startgass(){
+        return "mengalirkan bensin ke ruang bakar, RPM naik, roda berputar";
+    }
 }
 class BMW extends Mobil{
 
@@ -19,6 +22,9 @@ class BMW extends Mobil{
 class Tesla extends Mobil{
     function selfparking(){
         echo "Bisa Parking Sendiri";
+    }
+    function startgass(){
+        return "mengalirkan listrik ke dinamo, RPM naik, roda berputar";
     }
 }
 
@@ -34,8 +40,6 @@ $tesla->tipe = "320i";
 $tesla->mesin = "2000cc";
 $tesla->max_speed = "280km/h";
 
-echo $tesla->kecepatanMax();
+echo "BMW :" .$bmw->startgass();
 echo "<br>";
-echo "kebutuhan VIP : ";
-echo "<br>";
-$tesla->selfparking();
+echo "Tesla :" .$tesla->startgass();
