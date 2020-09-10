@@ -13,28 +13,29 @@ class Mobil {
         return " Kecepatan maksimal dari mobil ini adalah ".$this->max_speed;
     }
 }
+class BMW extends Mobil{
 
-$bmw = new Mobil;
+}
+class Tesla extends Mobil{
+    function selfparking(){
+        echo "Bisa Parking Sendiri";
+    }
+}
+
+$bmw = new BMW;
 $bmw->merk = "BMW";
 $bmw->tipe = "320i";
 $bmw->mesin = "2000cc";
 $bmw->max_speed = "280km/h";
 
-$bmw2 = new Mobil;
-$bmw2->merk = "BMW";
-$bmw2->tipe = "320i";
-$bmw2->mesin = "2000cc";
-$bmw2->max_speed = "280km/h";
+$tesla = new Tesla;
+$tesla->merk = "BMW";
+$tesla->tipe = "320i";
+$tesla->mesin = "2000cc";
+$tesla->max_speed = "280km/h";
 
-
-echo "Tipe ".$bmw->kecepatanMax();
+echo $tesla->kecepatanMax();
 echo "<br>";
-echo "$bmw2->tipe";
+echo "kebutuhan VIP : ";
 echo "<br>";
-echo "$bmw->tipe";
-
-if($bmw === $bmw2){
-    echo "sama";
-}else{
-    echo "TIDAK";
-}
+$tesla->selfparking();
