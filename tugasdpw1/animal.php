@@ -3,10 +3,7 @@ class Hewan{
     public  $jumlah_kaki,
             $bisa_terbang,
             $bersuara;
-
-    public function jumlahKaki(){
-        return $this->jumlah_kaki;
-    }
+            
     public function bersuara(){
         return $this->bersuara;
     }
